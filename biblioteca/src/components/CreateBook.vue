@@ -1,13 +1,11 @@
 <script setup>
 import ButtonLive from './ButtonLive.vue'
-import { ref } from 'vue'
-const book = ref({})
-// function submitBook() {}
+const newBook = {}
 </script>
 
 <template>
 	<div>
-		{{ book }}
+		<!-- {{ book }} -->
 		<div
 			class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md place-items-center"
 		>
@@ -19,14 +17,14 @@ const book = ref({})
 					type="text"
 					placeholder="Book Name"
 					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-					v-model="book.bookName"
+					v-model="newBook.bookName"
 				/>
 			</div>
 			<div>
 				<input
 					type="text"
 					placeholder="Autor"
-					v-model="book.author"
+					v-model="newBook.author"
 					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
 				/>
 			</div>
@@ -34,7 +32,7 @@ const book = ref({})
 				<input
 					type="text"
 					placeholder="Book price"
-					v-model="book.price"
+					v-model="newBook.price"
 					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
 				/>
 			</div>
@@ -42,14 +40,14 @@ const book = ref({})
 				<input
 					type="text"
 					placeholder="Img URL"
-					v-model="book.url"
+					v-model="newBook.url"
 					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
 				/>
 			</div>
 			<div>
 				<ButtonLive
 					class="justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-					@click="$emit('submit', book)"
+					@click="$emit('submit', newBook)"
 					>Submit</ButtonLive
 				>
 			</div>
