@@ -11,7 +11,12 @@ defineProps({
 </script>
 
 <template>
-	<ul>
-		<Book v-for="item in books" :key="item" :book="item" />
+	<ul class="grid grid-cols-3 gap-4 place-items-center mx-5 mt-5">
+		<Book
+			v-for="book in books"
+			:key="book"
+			:book="book"
+			@buy="$emit('buy', $event)"
+		/>
 	</ul>
 </template>

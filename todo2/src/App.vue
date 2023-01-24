@@ -32,12 +32,12 @@ function handleSubmit() {
 <template>
 	<div class="flex flex-col justify-center items-center">
 		<h1 class="font-semibold text-6xl">To Do List</h1>
-		<!-- De esta forma estilamos, utilizando el tailwind, el cual lo llamamos e instalamos siguiendo una guia. -->
+		{{/* De esta forma estilamos, utilizando el tailwind, el cual lo llamamos e instalamos siguiendo una guia. */}}
 
 		<InputField v-model="taskName" @keyup.enter="handleSubmit" />
-		<!-- En este imputfield vemos que llamamos con el v-model a taskname y agregamos el evento que desata el handlesubmit -->
+		{{ /* En este imputfield vemos que llamamos con el v-model a taskname y agregamos el evento que desata el handlesubmit */ }}
 		<ActionButton @click="handleSubmit">Add</ActionButton>
-		<!-- Aca agregamos otro evento y tambien, empezamos a darle un nombre particular a cada boton generico entre los tags -->
+		{{ /* Aca agregamos otro evento y tambien, empezamos a darle un nombre particular a cada boton generico entre los tags */ }}
 
 		<TaskList :items="tasks" />
 	</div>

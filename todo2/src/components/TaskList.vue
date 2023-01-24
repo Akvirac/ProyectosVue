@@ -17,7 +17,7 @@ defineProps({
 <template>
 	<ul>
 		<TaskItem v-for="task in items" :key="task" :item="task" />
-		<!-- En el v-for, lo que vemos en como recorre nuestro array de task y los lleva a items, que ahi es donde se almacenan todas
-            las tareas que vayamos agregando para luego mostrarlas. -->
+		{{/* En el v-for, lo que vemos en como recorre nuestro array de task y los lleva a items, que ahi es donde se almacenan todas
+            las tareas que vayamos agregando para luego mostrarlas. */ }}
 	</ul>
 </template>
