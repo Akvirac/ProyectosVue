@@ -1,6 +1,7 @@
 <script setup>
 import { defineProps } from 'vue'
 import Book from './Book.vue'
+
 defineProps({
 	books: {
 		type: Array,
@@ -11,7 +12,6 @@ defineProps({
 
 <template>
 	<ul>
-		<Book v-for="book in books" :key="book" :book="book" />
-		hola
+		<Book v-for="item in books" :key="item" :book="item" />
 	</ul>
 </template>

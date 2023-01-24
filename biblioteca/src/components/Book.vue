@@ -3,7 +3,7 @@ import { defineProps } from 'vue'
 
 defineProps({
 	book: {
-		type: Array,
+		type: Object,
 		required: true,
 	},
 })
@@ -11,6 +11,6 @@ defineProps({
 
 <template>
 	<div>
-		<li>{{ book }}</li>
+		<h5>{{ book }}</h5>
 	</div>
 </template>
