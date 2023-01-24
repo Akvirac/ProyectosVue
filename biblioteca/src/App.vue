@@ -43,21 +43,24 @@ function buyBook(book) {
 </script>
 
 <template>
-	<div class="mt-5 grid h-screen place-items-center">
-		<ButtonLive
-			class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-			@click="isFormActive = true"
-			>Submit a new Book</ButtonLive
-		>
+	<div class="mt-5 h-screen place-items-center">
+		<div class="flex justify-center">
+			<ButtonLive
+				class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+				@click="isFormActive = true"
+				>Submit a new Book</ButtonLive
+			>
 
-		<ButtonLive
-			class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-			@click="isFormActive = false"
-			>Book List</ButtonLive
-		>
+			<ButtonLive
+				class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+				@click="isFormActive = false"
+				>Book List</ButtonLive
+			>
+		</div>
 		<!-- {{ books }} -->
-
-		<CreateBook v-if="isFormActive" @submit="submitBook" />
-		<BookList v-else :books="books" @buy="buyBook" />
+		<div class="flex justify-center mt-5">
+			<CreateBook v-if="isFormActive" @submit="submitBook" />
+			<BookList v-else :books="books" @buy="buyBook" />
+		</div>
 	</div>
 </template>
